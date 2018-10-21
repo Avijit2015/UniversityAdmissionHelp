@@ -7,7 +7,6 @@
         android:title="@string/my_account" />
 
 
-
     <item android:id="@+id/nav_exam"
         android:title="@string/live_exam" />
 
@@ -28,5 +27,7 @@
 
     <item android:id="@+id/nav_about"
         android:title="@string/about" />
+
+
 
 </menu>

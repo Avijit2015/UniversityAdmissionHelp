@@ -1,5 +1,6 @@
 package edmt.dev.androidgridlayout;
 
+import android.content.ClipData;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +8,8 @@ import android.view.View;
 import android.widget.TextView;
 
 public class ActivityGeneral extends AppCompatActivity implements View.OnClickListener {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +21,8 @@ public class ActivityGeneral extends AppCompatActivity implements View.OnClickLi
 
         OptionsDu.setOnClickListener(this);
         OptionsRu.setOnClickListener(this);
+
+        //Test Push....
 
     }
 
