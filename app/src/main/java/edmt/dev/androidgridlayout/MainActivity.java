@@ -125,5 +125,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
+    @Override
+    public void onBackPressed() {
+        // Nothing Will Happen When Pressing Back Button, You have to press Logout Card to logout....
+    }
+
 
 }
