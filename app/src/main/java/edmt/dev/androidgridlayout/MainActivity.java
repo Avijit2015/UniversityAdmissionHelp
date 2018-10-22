@@ -2,12 +2,17 @@ package edmt.dev.androidgridlayout;
 
 
 import android.content.Intent;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 
 //import android.content.Intent;
@@ -21,15 +26,26 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
+    private DrawerLayout mDrawerLayout;
+    private ActionBarDrawerToggle mToggle;
+    private FirebaseAuth firebaseAuth;
 
 
 
-    private CardView Engineering, Agriculture, General, Medical, National, Private;
+
+    private CardView Engineering, Agriculture, General, Medical, National, Private, Logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        /*mDrawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+        mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
+        mDrawerLayout.addDrawerListener(mToggle);
+        mToggle.syncState();
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);*/
+
 
         Engineering = (CardView) findViewById(R.id.EngineeringCard);
         Agriculture = (CardView) findViewById(R.id.AgricultureCard);
@@ -37,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Medical = (CardView) findViewById(R.id.MedicalCard);
         National = (CardView) findViewById(R.id.NationalCard);
         Private = (CardView) findViewById(R.id.PrivateCard);
+        Logout = (CardView) findViewById(R.id.LogOutCard);
 
          Engineering.setOnClickListener(this);
          Agriculture.setOnClickListener(this);
@@ -44,10 +61,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
          Medical.setOnClickListener(this);
          National.setOnClickListener(this);
          Private.setOnClickListener(this);
+         Logout.setOnClickListener(this);
 
 
 
     }
+
+
 
 
     @Override
@@ -85,10 +105,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(i);
                 break;
 
+            case R.id.LiveExamCard:
+                i = new Intent(this, LiveExam.class);
+                startActivity(i);
+                break;
+
+            case R.id.LogOutCard:
+                firebaseAuth.getInstance().signOut();
+                finish();
+                startActivity(new Intent(MainActivity.this, ActivityLogin.class));
+                Toast.makeText(getApplicationContext(), "Logged Out", Toast.LENGTH_SHORT).show();
+                break;
+
+
             default:
                 break;
 
         }
 
     }
+
+
 }
