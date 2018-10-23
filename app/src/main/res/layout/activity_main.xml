@@ -286,8 +286,9 @@
 
         </android.support.v7.widget.CardView>
 
+
         <android.support.v7.widget.CardView
-            android:id="@+id/LiveExamCard"
+            android:id="@+id/DashboardCard"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
@@ -305,24 +306,22 @@
                 android:layout_margin="16dp"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/team_time" />
+
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Live Exam"
+                    android:text="Dashboard"
                     android:textAlignment="center"
                     android:textColor="@android:color/black"
-                    android:textSize="11sp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
+
+
 
         <android.support.v7.widget.CardView
             android:id="@+id/LogOutCard"
@@ -343,11 +342,7 @@
                 android:layout_margin="16dp"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/calendar" />
+
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -355,12 +350,14 @@
                     android:text="Logout"
                     android:textAlignment="center"
                     android:textColor="@android:color/black"
-                    android:textSize="11sp"
+                    android:textSize="15sp"
                     android:textStyle="bold" />
 
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
+
+
 
     </GridLayout>
 

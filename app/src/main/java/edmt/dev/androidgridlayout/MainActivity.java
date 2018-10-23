@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-    private CardView Engineering, Agriculture, General, Medical, National, Private, Logout;
+    private CardView Engineering, Agriculture, General, Medical, National, Private, Logout, Dashboard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         National = (CardView) findViewById(R.id.NationalCard);
         Private = (CardView) findViewById(R.id.PrivateCard);
         Logout = (CardView) findViewById(R.id.LogOutCard);
+        Dashboard = (CardView) findViewById(R.id.DashboardCard);
 
          Engineering.setOnClickListener(this);
          Agriculture.setOnClickListener(this);
@@ -62,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
          National.setOnClickListener(this);
          Private.setOnClickListener(this);
          Logout.setOnClickListener(this);
+         Dashboard.setOnClickListener(this);
 
 
 
@@ -105,16 +107,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(i);
                 break;
 
-            case R.id.LiveExamCard:
-                i = new Intent(this, LiveExam.class);
-                startActivity(i);
-                break;
+
 
             case R.id.LogOutCard:
                 firebaseAuth.getInstance().signOut();
                 finish();
                 startActivity(new Intent(MainActivity.this, ActivityLogin.class));
                 Toast.makeText(getApplicationContext(), "Logged Out", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.DashboardCard:
+                //Database Codes Retrieve Data..
+
+                startActivity(new Intent(MainActivity.this, ViewAll.class));
+
+                Toast.makeText(getApplicationContext(), "Dashboard", Toast.LENGTH_SHORT).show();
+
                 break;
 
 

@@ -40,7 +40,8 @@
         <activity android:name=".GenDuOptions" />
         <activity android:name=".GenRuOptions" />
         <activity android:name=".GenDuNotice" />
-        <activity android:name=".LiveExam"></activity>
+        <activity android:name=".LiveExam" />
+        <activity android:name=".ViewAll"></activity>
     </application>
 
 </manifest>

@@ -16,7 +16,7 @@
         android:layout_marginTop="155dp"
         android:ems="10"
         android:gravity="left"
-        android:hint="Enter User Name"
+        android:hint="Email"
         android:inputType="textPersonName"
         android:textColor="#ECF0F1"
         android:textColorHint="#ECF0F1" />
@@ -28,8 +28,32 @@
         android:layout_below="@+id/et3"
         android:layout_centerHorizontal="true"
         android:ems="10"
-        android:hint="Enter Password"
+        android:hint="Password"
         android:inputType="textPassword"
+        android:textColor="#ECF0F1"
+        android:textColorHint="#ECF0F1" />
+
+    <EditText
+        android:id="@+id/et5"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et4"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Name"
+
+        android:textColor="#ECF0F1"
+        android:textColorHint="#ECF0F1" />
+
+    <EditText
+        android:id="@+id/et6"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et5"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Institute Name"
+
         android:textColor="#ECF0F1"
         android:textColorHint="#ECF0F1" />
 
@@ -37,7 +61,8 @@
         android:id="@+id/bt3"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/et6"
         android:background="@drawable/rounded_button"
         android:text="Register" />
 
