@@ -41,7 +41,7 @@
         <activity android:name=".GenRuOptions" />
         <activity android:name=".GenDuNotice" />
         <activity android:name=".LiveExam" />
-        <activity android:name=".ViewAll"></activity>
+        <activity android:name=".ProfileActivity"></activity>
     </application>
 
 </manifest>

@@ -67,8 +67,10 @@ public class ActivityRegister extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 FirebaseUser user = mAuth.getCurrentUser();
 
+
                                 DatabaseReference d = FirebaseDatabase.getInstance().getReference("Student Info");
-                                d.push().setValue(s);
+                                d.child(user.getUid()).setValue(s);
+                                mAuth.signOut();
 
                                 Intent intent = new Intent(ActivityRegister.this, ActivityLogin.class);
                                 startActivity(intent);

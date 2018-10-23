@@ -119,9 +119,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.DashboardCard:
                 //Database Codes Retrieve Data..
 
-                startActivity(new Intent(MainActivity.this, ViewAll.class));
+                startActivity(new Intent(MainActivity.this, ProfileActivity.class));
 
-                Toast.makeText(getApplicationContext(), "Dashboard", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Showing Dashboard Info...", Toast.LENGTH_SHORT).show();
 
                 break;
 
